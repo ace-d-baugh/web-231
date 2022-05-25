@@ -1,5 +1,14 @@
+/*
+   Title: site.css
+   Author: Professor Krasso & Ace Baugh
+   Date: 05/25/2022
+   Description: WEB 231 CSS for index.html
+*/
+
+/* importing Oswald Font from Google */
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Oswald:wght@300;400;500;700&family=Poiret+One&display=swap');
 
+/* Declaring site colors globally for ease of changing later */
 :root {
    --primaryColor: #3C275A;
    --accentColor: #D6A800;
@@ -21,6 +30,7 @@ h1, h2, h3, h4 {
    padding: 10px;
 }
 
+/* Links Section */
 a {
    color: var(--secondaryColor);
    text-decoration: none;
