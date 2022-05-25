@@ -1,2 +1,5 @@
-# web-231
-Bellevue University Web Development Cohort WEB 231 JavaScript course
+# WEB 231 Enterprise JavaScript I
+
+## Contributors
+ - Richard Krasso
+ - Ace Baugh
