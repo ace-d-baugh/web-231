@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Oswald:wght@300;400;500;700&family=Poiret+One&display=swap');
+
+:root {
+   --primaryColor: #3C275A;
+   --accentColor: #D6A800;
+   --secondaryColor: #453674;
+}
+
+body {
+   font-family: Oswald, Verdana, arial, sans-serif;
+}
+
+#container {
+   margin: 50px 100px 0;
+}
+
+h1, h2, h3, h4 {
+   background-color: var(--primaryColor);
+   color: white;
+   border: solid 1px var(--accentColor);
+   padding: 10px;
+}
+
+a {
+   color: var(--secondaryColor);
+   text-decoration: none;
+}
+
+a:hover {
+   background-color: var(--accentColor);
+   color: var(--secondaryColor);
+}
+
+a:visited {
+   color: var(--primaryColor);
+}
