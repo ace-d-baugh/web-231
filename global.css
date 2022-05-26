@@ -1,10 +1,10 @@
 /*
-   ============================================
-; Title: Assignment 1.3 - Environment Setup - site.css
+============================================
+; Title: Assignment #.# global.css
 ; Author: Professor Krasso & Ace Baugh
 ; Date: 05/25/2022
 ; Modified By: Ace Baugh
-; Description: WEB 231 CSS for index.html
+; Description: Global CSS file for all WEB 231 exercises and projects
 ;============================================
 */
 
@@ -18,36 +18,17 @@
 	--secondaryColor: #453674;
 }
 
-body {
-	font-family: Oswald, Verdana, arial, sans-serif;
-}
-
-#container {
-	margin: 50px 100px 0;
-}
-
-h1,
-h2,
-h3,
-h4 {
-	background-color: var(--primaryColor);
-	color: white;
-	border: solid 1px var(--accentColor);
-	padding: 10px;
-}
-
-/* Links Section */
-a {
+/* Return Home Links */
+.return-home {
 	color: var(--secondaryColor);
 	text-decoration: none;
 }
 
-a:hover {
+.return-home:hover {
 	background-color: var(--accentColor);
 	color: var(--secondaryColor);
 }
 
-a:visited {
+.return-home:visited {
 	color: var(--primaryColor);
 }
-

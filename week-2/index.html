@@ -1,0 +1,57 @@
+<!--
+============================================
+; Title: Assignment 2.2 - Hello JavaScript - index.html
+; Author: Professor Krasso & Ace Baugh
+; Date: 05/25/2022
+; Modified By: Ace Baugh
+; Description: This simple exercise adds text to the DOM 
+;  via JavaScript and also displays an alert once a button
+;  is pressed by the user.
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WEB 231 – Enterprise JavaScript I</title>
+
+   <!-- Link to external CSS page-->
+   <link rel="stylesheet" href="../global.css">
+</head>
+<body>
+   
+   <h1>Exercise 2.2 - Hello JavaScript</h1>
+   
+   <!-- Button, when clicked calls function -->
+   <button type="button" id="btnMyCourse">What course am I taking?</button>
+
+   <!-- Paragraph of JavaScripted text -->
+   <p id="txtMyWorld"></p>
+   
+   <!-- Return to home page -->
+   <p>
+      <a href="../index.html" class="return-home">Return</a>
+   </p>
+
+   <script>
+   
+   // Variable that holds the button
+   const btnMyCourse = document.getElementById('btnMyCourse');
+
+   // Adding Event Listener to the button
+   btnMyCourse.addEventListener("click", myCourseAlert);
+
+   // function that displays an alert once the function is called
+   function myCourseAlert() {
+      alert('WEB 231 – Enterprise JavaScript I.');
+   }
+
+   // Places text into the paragraph element when the page loads
+   document.getElementById("txtMyWorld").innerHTML = 'You are now in Baugh’s world!';
+   </script>
+
+</body>
+</html>      
