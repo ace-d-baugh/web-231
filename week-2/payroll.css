@@ -1,0 +1,17 @@
+/*
+============================================
+; Title: Assignment 2.3 - Values and Variables - payroll.css
+; Author: Professor Krasso & Ace Baugh
+; Date: 05/26/2022
+; Modified By: Ace Baugh
+; Description: This CSS file gives style to Payroll.html
+;============================================
+*/
+
+h1 {
+   text-align: center;
+}
+
+ul {
+   border: 1px dotted red;
+}

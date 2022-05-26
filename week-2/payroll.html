@@ -1,0 +1,120 @@
+<!--
+============================================
+; Title: Assignment 2.3 - Values and Variables - payroll.html
+; Author: Professor Krasso & Ace Baugh
+; Date: 05/26/2022
+; Modified By: Ace Baugh
+; Description: This simple assignment displays bound
+;  employee records via JavaScript to the DOM 
+; and converts dates from 
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WEB 231 – Enterprise JavaScript I</title>
+
+   <!-- Link to external CSS page-->
+   <link rel="stylesheet" href="../site.css">
+   <link rel="stylesheet" href="payroll.css">
+   <link rel="stylesheet" href="../global.css">
+</head>
+<body>
+   
+   <!-- Page Header -->
+   <h1>Payroll System</h1>
+
+   <!-- Employee Mark Adams -->
+   <h3>Employee Record 1</h3>
+
+   <ul>
+      <li id="txtFirstNameMark"></li>
+      <li id="txtLastNameMark"></li>
+      <li id="txtAddressMark"></li>
+      <li id="dateHireDateMark"></li>
+      <li id="numPayRateMark"></li>
+   </ul>
+   
+   <!-- Employee Kathy Cronin -->   
+   <h3>Employee Record 2</h3>
+
+   <ul>
+      <li id="txtFirstNameKathy"></li>
+      <li id="txtLastNameKathy"></li>
+      <li id="txtAddressKathy"></li>
+      <li id="dateHireDateKathy"></li>
+      <li id="numPayRateKathy"></li>
+   </ul>
+
+   <!-- Employee Liz Baugh -->   
+   <h3>Employee Record 3</h3>
+
+   <ul>
+      <li id="txtFirstNameLiz"></li>
+      <li id="txtLastNameLiz"></li>
+      <li id="txtAddressLiz"></li>
+      <li id="dateHireDateLiz"></li>
+      <li id="numPayRateLiz"></li>
+   </ul>
+
+   <!-- Return to home page -->
+   <p>
+      <a href="../index.html" class="return-home">Return</a>
+   </p>
+
+<script>
+
+      // Variable Declaration for Employees
+
+      // Mark Adams
+      const txtFirstNameMark = 'Mark';
+      const txtLastNameMark = 'Adams';
+      const txtAddressMark = '101 Center St.';
+      const dateHireDateMark = new Date(2020, 5, 12).toLocaleDateString("en-US");
+      const numPayRateMark = 29.60;
+
+      // Kathy Cronin
+      const txtFirstNameKathy = 'Kathy';
+      const txtLastNameKathy = 'Cronin';
+      const txtAddressKathy = '105 Main St.';
+      const dateHireDateKathy = new Date(2021, 8, 22).toLocaleDateString("en-US");
+      const numPayRateKathy = 19.50;
+
+      // Liz Baugh
+      const txtFirstNameLiz = 'Liz';
+      const txtLastNameLiz = 'Baugh';
+      const txtAddressLiz = '103 State St.';
+      const dateHireDateLiz = new Date(2022, 0, 2).toLocaleDateString("en-US");
+      const numPayRateLiz = 15.55;
+
+   // Binds text to the designated list element and displays when the page loads
+
+   // Mark Adams
+   document.getElementById('txtFirstNameMark').innerHTML = txtFirstNameMark;
+   document.getElementById('txtLastNameMark').innerHTML = txtLastNameMark;
+   document.getElementById('txtAddressMark').innerHTML = txtAddressMark;
+   document.getElementById('dateHireDateMark').innerHTML = dateHireDateMark;
+   document.getElementById('numPayRateMark').innerHTML = numPayRateMark.toFixed(1).toString();
+
+   // Kathy Cronin
+   document.getElementById('txtFirstNameKathy').innerHTML = txtFirstNameKathy;
+   document.getElementById('txtLastNameKathy').innerHTML = txtLastNameKathy;
+   document.getElementById('txtAddressKathy').innerHTML = txtAddressKathy;
+   document.getElementById('dateHireDateKathy').innerHTML = dateHireDateKathy;
+   document.getElementById('numPayRateKathy').innerHTML = numPayRateKathy.toFixed(1).toString();
+
+   // Liz Baugh
+   document.getElementById('txtFirstNameLiz').innerHTML = txtFirstNameLiz;
+   document.getElementById('txtLastNameLiz').innerHTML = txtLastNameLiz;
+   document.getElementById('txtAddressLiz').innerHTML = txtAddressLiz;
+   document.getElementById('dateHireDateLiz').innerHTML = dateHireDateLiz;
+   document.getElementById('numPayRateLiz').innerHTML = numPayRateLiz.toFixed(1).toString();
+
+</script>
+
+</body>
+</html>      
