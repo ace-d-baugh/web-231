@@ -1,0 +1,51 @@
+/*
+============================================
+; Title: Assignment 3.2 - Temperature Conversion - baugh-temp-conversion.css
+; Author: Professor Krasso & Ace Baugh
+; Date: 06/07/2022
+; Modified By: Ace Baugh
+; Description: This CSS file gives style to baugh-temp-conversion.html
+;============================================
+*/
+
+.app-header {
+   font-weight: 400;
+}
+
+.container {
+   margin: auto;
+   width: 550px;   
+}
+.card {
+   margin: 40px 0;
+   box-shadow: 0px 2px 5px 5px rgba(0,0,0,.2);
+   padding: 0 20px
+}
+
+.card h1 {
+   color: var(--primaryColor);
+   margin: 5px;
+}
+
+input {
+   margin-top: 20px;
+   padding: 8px;
+   border: 1px solid var(--primaryColor);
+   border-radius: 3px;
+}
+
+.btn {
+   color: white;
+   background-color: var(--primaryColor);
+   border: 2px solid black;
+   border-radius: 3px;
+   padding: 12px;
+   width: 285px;
+   margin: 40px 0 20px;
+}
+
+.results {
+   margin: 0;
+   text-align: center;
+   font-size: 28px;
+}

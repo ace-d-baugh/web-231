@@ -8,10 +8,6 @@
 ;============================================
 */
 
-h1 {
-   text-align: center;
-}
-
 ul {
-   border: 1px dotted red;
+	border: 1px dotted red;
 }

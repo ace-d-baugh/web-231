@@ -18,6 +18,14 @@
 	--secondaryColor: #453674;
 }
 
+body {
+	font-family: Oswald, Verdana, arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
 /* Return Home Links */
 .return-home {
 	color: var(--secondaryColor);
