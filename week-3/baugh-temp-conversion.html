@@ -7,6 +7,7 @@
 ; Description: This simple exercise takes the user's input
 ;                       and converts the number to its Celsius 
 ;                       equivalent and displays it.
+; Referenced Code: W3Schools: Trigger button enter
 ============================================
 -->
 
@@ -25,45 +26,68 @@
 	<body>
 		<h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
 
-      <div class="container">
-         
-		<div class="card">
-			<div class="card-title">
-				<h1>Fahrenheit to Celsius Converter</h1>
+		<div class="container">
+			<div class="card">
+				<div class="card-title">
+					<h1>Fahrenheit to Celsius Converter</h1>
+				</div>
+				<div class="card-body">
+					<form class="form">
+						<div class="form-row">
+							<label for="txtFahrenheit">Fahrenheit value:</label>
+							<input type="text" name="txtFahrenheit" id="txtFahrenheit" placeholder="80" required />
+						</div>
+						<div class="form-row">
+							<input id="btnConvert" class="btn" type="button" value="Convert Temperature" />
+						</div>
+					</form>
+				</div>
 			</div>
-			<div class="card-body">
-				<form class="form">
-					<div class="form-row">
-						<label for="txtFahrenheit">Fahrenheit value:</label>
-						<input type="text" name="txtFahrenheit" id="txtFahrenheit" placeholder="80" required />
-					</div>
-					<div class="form-row">
-						<input id="btnConvert" class="btn" type="button" value="Convert Temperature" />
-					</div>
-				</form>
+
+			<div class="card">
+				<div class="card-title">
+					<h1>Conversion Results</h1>
+				</div>
+				<div class="card-body">
+					<p class="results" id="txtResults">26.67</p>
+				</div>
 			</div>
+
+			<!-- Return to home page -->
+			<p>
+				<a href="../index.html" class="return-home">Return</a>
+			</p>
 		</div>
-
-		<div class="card">
-			<div class="card-title">
-				<h1>Conversion Results</h1>
-			</div>
-			<div class="card-body">
-				<p class="results" id="txtResults">26.67</p>
-			</div>
-		</div>
-
-		<!-- Return to home page -->
-		<p>
-			<a href="../index.html" class="return-home">Return</a>
-		</p>
-
-      </div>
-      <!-- JAVASCRIPT SECTION-->
+		<!-- JAVASCRIPT SECTION-->
 		<script>
 			// Variable that holds the button
 			const btnConvert = document.getElementById('btnConvert');
 
+			// *** Code from W3Schools and modified to fit code ***
+
+			// Get the input field
+			var input = document.getElementById('txtFahrenheit');
+
+			// Execute a function when the user presses a key on the keyboard
+			input.addEventListener('keypress', function (event) {
+				// If the user presses the "Enter" key on the keyboard
+				if (event.key === 'Enter') {
+					// Cancel the default action, if needed
+					event.preventDefault();
+					// Trigger the button element with a click
+					document.getElementById('btnConvert').click(tempConvert);
+				}
+			});
+			// *** End Used Code ***
+
+			// Clear And Select Function
+			function clearAndSelect() {
+				// Clear input field
+				document.getElementById('txtFahrenheit').value = '';
+
+				// Reselects input field for ease of typing
+				document.getElementById('txtFahrenheit').focus();
+			}
 			// Adding Event Listener to the button
 			btnConvert.addEventListener('click', tempConvert);
 
@@ -76,11 +100,8 @@
 
 				// If empty or a non-number an alert will display else it will convert the number
 				if (fahrenheit === '' || !Number.isInteger(parseFloat(fahrenheit))) {
-					// Clear input field
-					document.getElementById('txtFahrenheit').value = '';
-
-					// Reselects input field for ease of typing
-					document.getElementById('txtFahrenheit').focus();
+					// Calls clear and select function
+					clearAndSelect();
 
 					// Alert user to enter a number
 					alert('Please enter a real number.');
@@ -90,6 +111,7 @@
 
 					// Places text into the paragraph element
 					document.getElementById('txtResults').innerHTML = convertedValue;
+					clearAndSelect();
 				}
 			}
 		</script>
