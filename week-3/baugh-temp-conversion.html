@@ -24,39 +24,41 @@
 		<link rel="stylesheet" href="baugh-temp-conversion.css" />
 	</head>
 	<body>
-		<h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+		<div id="container">
+			<h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
 
-		<div class="container">
-			<div class="card">
-				<div class="card-title">
-					<h1>Fahrenheit to Celsius Converter</h1>
-				</div>
-				<div class="card-body">
-					<form class="form">
-						<div class="form-row">
-							<label for="txtFahrenheit">Fahrenheit value:</label>
-							<input type="text" name="txtFahrenheit" id="txtFahrenheit" placeholder="80" required />
-						</div>
-						<div class="form-row">
-							<input id="btnConvert" class="btn" type="button" value="Convert Temperature" />
-						</div>
-					</form>
+			<div class="card-container">
+				<div class="card">
+					<div class="card-title">Fahrenheit to Celsius Converter</div>
+					<div class="card-content">
+						<form class="form">
+							<div class="form-field">
+								<label for="txtFahrenheit">Fahrenheit value:</label>
+								<input type="text" name="txtFahrenheit" id="txtFahrenheit" placeholder="80" required />
+							</div>
+							<div class="form-field">
+								<button id="btnSubmit" class="btn btn-primary full-width" type="button">Convert Temperature</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 
-			<div class="card">
-				<div class="card-title">
-					<h1>Conversion Results</h1>
-				</div>
-				<div class="card-body">
-					<p class="results" id="txtResults">26.67</p>
+			<div class="card-container">
+				<div class="card">
+					<div class="card-title">Conversion Results</div>
+					<div class="card-content">
+						<p class="results" id="txtResults">26.67</p>
+					</div>
 				</div>
 			</div>
 
 			<!-- Return to home page -->
-			<p>
-				<a href="../index.html" class="return-home">Return</a>
-			</p>
+			<div class="return-home">
+				<p>
+					<a href="../index.html" class="return-home">Return</a>
+				</p>
+			</div>
 		</div>
 		<!-- JAVASCRIPT SECTION-->
 		<script>
