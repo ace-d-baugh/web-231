@@ -101,7 +101,7 @@
 				// Input Validation
 
 				// If empty or a non-number an alert will display else it will convert the number
-				if (fahrenheit === '' || !Number.isInteger(parseFloat(fahrenheit))) {
+				if (fahrenheit === '' || isNaN(fahrenheit)) {
 					// Calls clear and select function
 					clearAndSelect();
 
