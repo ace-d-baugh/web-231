@@ -11,3 +11,114 @@
 ; Referenced Code: W3Schools: Trigger button enter
 ============================================
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WEB 231 – Enterprise JavaScript I</title>
+
+		<!-- Link to external CSS page-->
+		<link rel="stylesheet" href="../global.css" />
+		<link rel="stylesheet" href="baugh-number-game.css" />
+	</head>
+	<body>
+		<div id="container">
+			<h1 class="app-header">Welcome to the numbers game!</h1>
+
+			<div class="card-container">
+				<div class="card">
+					<div class="card-title">Pick a number between 1 and 10</div>
+					<div class="card-content">
+						<form class="form">
+							<div class="form-field">
+								<label for="txtMyNumber">Guess the number:</label>
+								<input type="text" name="txtMyNumber" id="txtMyNumber" placeholder="80" required />
+							</div>
+							<div class="form-field">
+								<button id="btnSubmit" class="btn btn-primary full-width" type="button">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-container">
+				<div class="card">
+					<div class="card-title">Results</div>
+					<div class="card-content">
+						<p class="results" id="txtResults"></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Return to home page -->
+			<div class="return-home">
+				<p>
+					<a href="../index.html" class="return-home">Return</a>
+				</p>
+			</div>
+		</div>
+		<!-- JAVASCRIPT SECTION-->
+		<script>
+
+         const rnd = Math.floor((Math.random() * 10) + 1); // Generating a random number between 1-10
+			// Variable that holds the button
+			const btnSubmit = document.getElementById('btnSubmit');
+
+			// *** Code from W3Schools and modified to fit code ***
+
+			// Get the input field
+			var input = document.getElementById('txtFahrenheit');
+
+			// Execute a function when the user presses a key on the keyboard
+			input.addEventListener('keypress', function (event) {
+				// If the user presses the "Enter" key on the keyboard
+				if (event.key === 'Enter') {
+					// Cancel the default action, if needed
+					event.preventDefault();
+					// Trigger the button element with a click
+					document.getElementById('btnSubmit').click(tempConvert);
+				}
+			});
+			// *** End Used Code ***
+
+			// Clear And Select Function
+			function clearAndSelect() {
+				// Clear input field
+				document.getElementById('txtFahrenheit').value = '';
+
+				// Reselects input field for ease of typing
+				document.getElementById('txtFahrenheit').focus();
+			}
+			// Adding Event Listener to the button
+			btnConvert.addEventListener('click', tempConvert);
+
+			// function that displays an alert once the function is called
+			function tempConvert() {
+				// Stores user input into variable
+				let fahrenheit = document.getElementById('txtFahrenheit').value;
+
+				// Input Validation
+
+				// If empty or a non-number an alert will display else it will convert the number
+				if (fahrenheit === '' || !Number.isInteger(parseFloat(fahrenheit))) {
+					// Calls clear and select function
+					clearAndSelect();
+
+					// Alert user to enter a number
+					alert('Please enter a real number.');
+				} else {
+					// Converts input value to celsius rounded to 2 decimal points
+					const convertedValue = ((parseFloat(fahrenheit) - 32) / 1.8).toFixed(2);
+
+					// Places text into the paragraph element
+					document.getElementById('txtResults').innerHTML = convertedValue;
+					clearAndSelect();
+				}
+			}
+		</script>
+	</body>
+</html>
