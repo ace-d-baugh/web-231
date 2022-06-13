@@ -35,7 +35,7 @@
 						<form class="form">
 							<div class="form-field">
 								<label for="txtMyNumber">Guess the number:</label>
-								<input type="text" name="txtMyNumber" id="txtMyNumber" placeholder="80" required />
+								<input type="text" name="txtMyNumber" id="txtMyNumber" required />
 							</div>
 							<div class="form-field">
 								<button id="btnSubmit" class="btn btn-primary full-width" type="button">Submit</button>
@@ -55,7 +55,7 @@
 			</div>
 
 			<!-- Return to home page -->
-			<div class="return-home">
+			<div class="home-link">
 				<p>
 					<a href="../index.html" class="return-home">Return</a>
 				</p>
@@ -63,15 +63,16 @@
 		</div>
 		<!-- JAVASCRIPT SECTION-->
 		<script>
+			// Generating a random number between 1-10
+			const rnd = Math.floor(Math.random() * 10 + 1);
 
-         const rnd = Math.floor((Math.random() * 10) + 1); // Generating a random number between 1-10
 			// Variable that holds the button
 			const btnSubmit = document.getElementById('btnSubmit');
 
-			// *** Code from W3Schools and modified to fit code ***
+			// *** Code from W3Schools for using Enter as an input and modified to fit code ***
 
 			// Get the input field
-			var input = document.getElementById('txtFahrenheit');
+			var input = document.getElementById('txtMyNumber');
 
 			// Execute a function when the user presses a key on the keyboard
 			input.addEventListener('keypress', function (event) {
@@ -80,42 +81,52 @@
 					// Cancel the default action, if needed
 					event.preventDefault();
 					// Trigger the button element with a click
-					document.getElementById('btnSubmit').click(tempConvert);
+					document.getElementById('btnSubmit').click(guessingGame);
 				}
 			});
 			// *** End Used Code ***
 
-			// Clear And Select Function
+			// Clear And Select Input Field Function
 			function clearAndSelect() {
 				// Clear input field
-				document.getElementById('txtFahrenheit').value = '';
+				document.getElementById('txtMyNumber').value = '';
 
 				// Reselects input field for ease of typing
-				document.getElementById('txtFahrenheit').focus();
+				document.getElementById('txtMyNumber').focus();
 			}
+
 			// Adding Event Listener to the button
-			btnConvert.addEventListener('click', tempConvert);
+			btnSubmit.addEventListener('click', guessingGame);
 
 			// function that displays an alert once the function is called
-			function tempConvert() {
+			function guessingGame() {
 				// Stores user input into variable
-				let fahrenheit = document.getElementById('txtFahrenheit').value;
+				let myNumber = document.getElementById('txtMyNumber').value;
 
 				// Input Validation
 
-				// If empty or a non-number an alert will display else it will convert the number
-				if (fahrenheit === '' || !Number.isInteger(parseFloat(fahrenheit))) {
+				// If empty or a non-number or outside of 1-10 an alert will display else it will continue
+				if (myNumber === '' || !Number.isInteger(parseFloat(myNumber)) || myNumber < 1 || myNumber > 10) {
 					// Calls clear and select function
 					clearAndSelect();
 
 					// Alert user to enter a number
-					alert('Please enter a real number.');
+					alert('Please enter a real number between 1 and 10.');
 				} else {
-					// Converts input value to celsius rounded to 2 decimal points
-					const convertedValue = ((parseFloat(fahrenheit) - 32) / 1.8).toFixed(2);
+					let result = '';
+					if (rnd < myNumber) {
+						// If input is less than secret number
+						result = `The number is less than ${myNumber}`;
+					} else if (rnd > myNumber) {
+						// If input is greater than secret number
+						result = `The number is greater than ${myNumber}`;
+					} else {
+						// If input is equal to the secret number
+						result = `Congratulations! You picked the correct number!`;
+					}
 
 					// Places text into the paragraph element
-					document.getElementById('txtResults').innerHTML = convertedValue;
+					document.getElementById('txtResults').innerHTML = result;
 					clearAndSelect();
 				}
 			}
