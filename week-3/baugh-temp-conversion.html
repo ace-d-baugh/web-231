@@ -63,7 +63,7 @@
 		<!-- JAVASCRIPT SECTION-->
 		<script>
 			// Variable that holds the button
-			const btnConvert = document.getElementById('btnConvert');
+			const btnSubmit = document.getElementById('btnSubmit');
 
 			// *** Code from W3Schools and modified to fit code ***
 
@@ -77,7 +77,7 @@
 					// Cancel the default action, if needed
 					event.preventDefault();
 					// Trigger the button element with a click
-					document.getElementById('btnConvert').click(tempConvert);
+					document.getElementById('btnSubmit').click(tempConvert);
 				}
 			});
 			// *** End Used Code ***
@@ -91,7 +91,7 @@
 				document.getElementById('txtFahrenheit').focus();
 			}
 			// Adding Event Listener to the button
-			btnConvert.addEventListener('click', tempConvert);
+			btnSubmit.addEventListener('click', tempConvert);
 
 			// function that displays an alert once the function is called
 			function tempConvert() {
