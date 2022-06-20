@@ -69,6 +69,26 @@
 
 		<!-- JAVASCRIPT SECTION-->         
       <script>
+			// Variable that holds the button
+			const btnDisplaySequence = document.getElementById("btnDisplaySequence");
+
+			// Adding Event Listener to the button
+			btnDisplaySequence.addEventListener('click', sequenceGame);
+
+			function sequenceGame() {
+				// Variable to hold user selection
+				const choice = document.getElementById("sequence").value;
+
+				if (choice === "fibonacci") {
+
+				} else if (choice === "even") {
+
+				} else if (choice === "odd") {
+
+				} else {
+					alert("Invalid selection, please try again!");
+				}
+			}
 
       </script>
 	</body>
