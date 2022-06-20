@@ -28,7 +28,7 @@
 		<div id="container">
 			<h1 class="app-header">Welcome to the sequence game!</h1>
 
-		<div class="card-container">
+			<div class="card-container">
 				<div class="card">
 					<div class="card-title">Sequence Selection Form</div>
 					<div class="card-content">
@@ -67,29 +67,72 @@
 			</div>
 		</div>
 
-		<!-- JAVASCRIPT SECTION-->         
-      <script>
+		<!-- JAVASCRIPT SECTION-->
+		<script>
 			// Variable that holds the button
-			const btnDisplaySequence = document.getElementById("btnDisplaySequence");
+			const btnDisplaySequence = document.getElementById('btnDisplaySequence');
 
 			// Adding Event Listener to the button
 			btnDisplaySequence.addEventListener('click', sequenceGame);
 
 			function sequenceGame() {
 				// Variable to hold user selection
-				const choice = document.getElementById("sequence").value;
+				const choice = document.getElementById('sequence').value;
 
-				if (choice === "fibonacci") {
+				// Variable to hold sequence results
+				let results = '';
 
-				} else if (choice === "even") {
-
-				} else if (choice === "odd") {
-
+				if (choice === 'fibonacci') {
+					// Call seqFibonacci function
+					results = seqFibonacci();
+				} else if (choice === 'even') {
+					// Call seqEven function
+					results = seqEven();
+				} else if (choice === 'odd') {
+					// Call seqOdd function
+					results = seqOdd();
 				} else {
-					alert("Invalid selection, please try again!");
+					alert('Invalid selection, please try again!');
 				}
+				// Display results to DOM
+				document.getElementById('txtResults').innerHTML = results;
 			}
 
-      </script>
+			// Function to create Fibonacci Sequence 0-40
+			function seqFibonacci() {
+				
+			}
+
+			// Function to create Even Sequence 1-20
+			function seqEven() {
+				let sequence = "";
+
+				let num = 1;
+				do {
+					console.log(num);
+					if ( num % 2 === 0) {
+						sequence += `${num}, `; 
+						console.log(sequence);
+					}
+					num++;
+				} while (num < 20)
+				return sequence.slice(0,-2);
+			}
+
+			// Function to create Odd Sequence 1-20
+			function seqOdd() {
+				let sequence = "";
+
+				for (let i = 0; i < 20; i++) {
+					console.log(i);
+					if ( i % 2 === 1) {
+						sequence += `${i}, `; 
+						console.log(sequence);
+					}
+				}
+				return sequence.slice(0,-2);
+			}
+
+		</script>
 	</body>
 </html>
