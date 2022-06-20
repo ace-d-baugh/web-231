@@ -75,6 +75,8 @@
 			// Adding Event Listener to the button
 			btnDisplaySequence.addEventListener('click', sequenceGame);
 
+			// Once button is pressed a function will be called that the selection made
+			// Or an alert will show to prompt for a selection to be made
 			function sequenceGame() {
 				// Variable to hold user selection
 				const choice = document.getElementById('sequence').value;
@@ -92,7 +94,7 @@
 					// Call seqOdd function
 					results = seqOdd();
 				} else {
-					alert('Invalid selection, please try again!');
+					alert('Invalid selection, please try again!'); // Alert user to chose an option
 				}
 				// Display results to DOM
 				document.getElementById('txtResults').innerHTML = results;
@@ -100,7 +102,7 @@
 
 			// Function to create Fibonacci Sequence 0-40
 			function seqFibonacci() {
-				let num1 = 0, num2 = 1, next ;
+				let num1 = 0, num2 = 1, next ; // Variables for sequence
 				let fibonacciSequenceText = "";
 
 				while (num1 < 40 ) {
@@ -116,32 +118,32 @@
 
 			// Function to create Even Sequence 1-20
 			function seqEven() {
-				let sequence = "";
+				let evenSequenceText = "";
 
 				let num = 1;
 				do {
 					if ( num % 2 === 0) {
-						sequence += `${num}, `; 
+						evenSequenceText += `${num}, `; 
 					}
 					num++;
 				} while (num < 20)
 				// Expected output 2, 4, 6, 8, 10, 12, 14, 16, 18 
               // slice(0, -2) removes the last two characters of the string.
-				return sequence.slice(0,-2);
+				return evenSequenceText.slice(0,-2);
 			}
 
 			// Function to create Odd Sequence 1-20
 			function seqOdd() {
-				let sequence = "";
+				let oddSequenceText = "";
 
 				for (let i = 0; i < 20; i++) {
 					if ( i % 2 === 1) {
-						sequence += `${i}, `; 
+						oddSequenceText += `${i}, `; 
 					}
 				}
 				// Expected output 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 
               // slice(0, -2) removes the last two characters of the string.
-				return sequence.slice(0,-2);
+				return oddSequenceText.slice(0,-2);
 			}
 
 		</script>
