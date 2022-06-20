@@ -100,7 +100,18 @@
 
 			// Function to create Fibonacci Sequence 0-40
 			function seqFibonacci() {
-				
+				let num1 = 0, num2 = 1, next ;
+				let fibonacciSequenceText = "";
+
+				while (num1 < 40 ) {
+					fibonacciSequenceText += `${num1}, `;
+					next = num1 + num2;
+					num1 = num2;
+					num2 = next;
+				}
+				// Expected output 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+              // slice(0, -2) removes the last two characters of the string.
+				return fibonacciSequenceText.slice(0, -2);
 			}
 
 			// Function to create Even Sequence 1-20
@@ -109,13 +120,13 @@
 
 				let num = 1;
 				do {
-					console.log(num);
 					if ( num % 2 === 0) {
 						sequence += `${num}, `; 
-						console.log(sequence);
 					}
 					num++;
 				} while (num < 20)
+				// Expected output 2, 4, 6, 8, 10, 12, 14, 16, 18 
+              // slice(0, -2) removes the last two characters of the string.
 				return sequence.slice(0,-2);
 			}
 
@@ -124,12 +135,12 @@
 				let sequence = "";
 
 				for (let i = 0; i < 20; i++) {
-					console.log(i);
 					if ( i % 2 === 1) {
 						sequence += `${i}, `; 
-						console.log(sequence);
 					}
 				}
+				// Expected output 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 
+              // slice(0, -2) removes the last two characters of the string.
 				return sequence.slice(0,-2);
 			}
 
