@@ -7,3 +7,14 @@
 ; Description: This CSS file gives style to baugh-sequence-game.html
 ;============================================
 */
+
+.results {
+   text-align: center;
+   font-size: 28px;
+   margin: 0;
+}
+
+.home-link {
+	width: 600px;
+	margin: 0 auto;
+}

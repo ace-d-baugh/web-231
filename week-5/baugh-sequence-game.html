@@ -22,11 +22,50 @@
 
 		<!-- Link to external CSS page-->
 		<link rel="stylesheet" href="../global.css" />
-		<link rel="stylesheet" href="baugh-sequnce-game.css" />
+		<link rel="stylesheet" href="baugh-sequence-game.css" />
 	</head>
 	<body>
 		<div id="container">
 			<h1 class="app-header">Welcome to the sequence game!</h1>
+
+		<div class="card-container">
+				<div class="card">
+					<div class="card-title">Sequence Selection Form</div>
+					<div class="card-content">
+						<form class="form">
+							<div class="form-field">
+								<label for="sequence">Choose a number sequence</label>
+								<select type="text" name="sequence" id="sequence" class="drop-down-menu" required>
+									<option value="select">--Select--</option>
+									<option value="fibonacci">Fibonacci Sequence</option>
+									<option value="even">Even Numbers</option>
+									<option value="odd">Odd Numbers</option>
+								</select>
+							</div>
+							<div class="form-field">
+								<button id="btnDisplaySequence" class="btn btn-primary full-width" type="button">Display Sequence</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-container">
+				<div class="card">
+					<div class="card-title">Sequence Results</div>
+					<div class="card-content">
+						<p class="results" id="txtResults"></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Return to home page -->
+			<div class="home-link">
+				<p>
+					<a href="../index.html" class="return-home">Return</a>
+				</p>
+			</div>
+		</div>
 
 		<!-- JAVASCRIPT SECTION-->         
       <script>
