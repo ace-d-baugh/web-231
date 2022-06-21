@@ -43,7 +43,7 @@ h1 {
 .card-title {
    text-align: center;
    font-size: 2em;
-   color: #4F3674;
+   color: var(--secondaryColor);
    font-weight: 400;
 }
 
@@ -92,7 +92,7 @@ h1 {
 
 .btn-primary:hover {
    background-color: var(--accentColor);
-   color: #4F3674;
+   color: var(--secondaryColor);
 }
 
 .full-width {
