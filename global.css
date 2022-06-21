@@ -91,7 +91,7 @@ h1 {
 }
 
 .btn-primary:hover {
-   background-color: #3c275a;
+   background-color: var(--accentColor);
    color: #4F3674;
 }
 
