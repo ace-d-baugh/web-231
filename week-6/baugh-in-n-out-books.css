@@ -1,0 +1,32 @@
+/*
+============================================
+; Title: Assignment 6.2 - In-n-Out Books - baugh-in-n-out-books.css
+; Author: Professor Krasso & Ace Baugh
+; Date: 06/27/2022
+; Modified By: Ace Baugh
+; Description: This CSS file gives extra style to baugh-in-n-out-books.html
+;============================================
+*/
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-bottom: 30px;
+}
+
+th {
+   text-align: left;
+   background-color: var(--secondaryColor);
+   color: white;
+}
+
+th, td {
+   border: 1px solid #ddd;
+   padding: 12px;
+}
+
+tr:hover {
+   background-color: var(--accentColor);
+   color: var(--secondaryColor);
+   cursor: pointer;
+}

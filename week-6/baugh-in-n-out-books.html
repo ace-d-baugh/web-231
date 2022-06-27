@@ -1,0 +1,151 @@
+<!--
+============================================
+; Title: Assignment 6.2 - In-n-Out Books - baugh-in-n-out-books.html
+; Author: Professor Krasso & Ace Baugh
+; Date: 06/27/2022
+; Modified By: Ace Baugh
+; Description: This simple exercise takes the user's input
+;                       and checks to see if it equal to the random
+;                       number generated and displays if it is higher 
+;                       lower or right on
+; Referenced Code: W3Schools: Trigger button enter
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WEB 231 – Enterprise JavaScript I</title>
+
+		<!-- Link to external CSS page-->
+		<link rel="stylesheet" href="../global.css" />
+		<link rel="stylesheet" href="baugh-in-n-out-books.css" />
+	</head>
+	<body>
+		<div id="container">
+			<h1 class="app-header">Welcome to In-N-Out-Books</h1>
+
+			<div class="card-container">
+				<div class="card">
+					<div class="card-title">My Favorites</div>
+					<div class="card-content">
+						<form class="form">
+							<div class="form-field">
+								<label for="favoriteList">Choose a listing</label>
+								<select type="text" name="favoriteList" id="favoriteList" class="drop-down-menu" required>
+									<option value="select">--Select--</option>
+									<option value="books">Top 3 Favorite Books</option>
+									<option value="authors">Top 3 Favorite Authors</option>
+								</select>
+							</div>
+							<div class="form-field">
+								<button id="btnDisplayListing" class="btn btn-primary full-width" type="button">Display Listing</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- Return to home page -->
+				<div class="home-link">
+					<p>
+						<a href="../index.html" class="return-home">Return</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="card-container" id="booksResults" style="display: none">
+				<div class="card">
+					<div class="card-title">Top 3 Favorite Books</div>
+					<div class="card-content">
+						<table>
+							<tr>
+								<th>ISBN</th>
+								<th>Title</th>
+								<th>Pages</th>
+							</tr>
+							<tr id="book01">
+								<td id="txtEndersGameISBN">1250773024</td>
+								<td id="txtEndersGameTitle">Ender's Game</td>
+								<td id="txtEndersGamePages">264</td>
+							</tr>
+							<tr id="book02">
+								<td id="txtBookOfMormonISBN">1592975003</td>
+								<td id="txtBookOfMormonTitle">The Book of Mormon: Another Testament of Jesus Christ</td>
+								<td id="txtBookOfMormonPages">779</td>
+							</tr>
+							<tr id="book03">
+								<td id="txtWinFriendsISBN">1546000240</td>
+								<td id="txtWinFriendsTitle">How to Win Friends and Influence Enemies</td>
+								<td id="txtWinFriendsPages">304</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-container" id="authorsResults" style="display: none">
+				<div class="card">
+					<div class="card-title">Top 3 Favorite Authors</div>
+					<div class="card-content">
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Genre</th>
+							</tr>
+							<tr>
+								<td id="txtCardName">Orson Scott Card</td>
+								<td id="txtCardGenre">Science Fiction</td>
+							</tr>
+							<tr>
+								<td id="txtSmithName">Joseph Smith</td>
+								<td id="txtSmithGenre">Religious</td>
+							</tr>
+							<tr>
+								<td id="txtWittName">Will Witt</td>
+								<td id="txtWittGenre">Political</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- JAVASCRIPT SECTION-->
+		<script>
+			// Variable that holds the button
+			const btnDisplayListing = document.getElementById('btnDisplayListing');
+
+			// Book Objects
+			let favoriteBooks = [
+				{
+					books: [],
+				},
+			];
+
+			// Adding Event Listener to the button
+			btnDisplayListing.addEventListener('click', favoriteDisplay);
+
+			// Once button is pressed a function will be called that the selection made
+			// Or an alert will show to prompt for a selection to be made
+			function favoriteDisplay() {
+				// Variable to hold user selection
+				const choice = document.getElementById('favoriteList').value;
+				let booksCard = document.getElementById('booksResults');
+				let authorsCard = document.getElementById('authorsResults');
+
+				if (choice === 'books') {
+					authorsCard.style.display = 'none';
+					booksCard.style.display = 'block';
+				} else if (choice === 'authors') {
+					booksCard.style.display = 'none';
+					authorsCard.style.display = 'block';
+				} else {
+					alert('Invalid selection, please try again!'); // Alert user to chose an option
+				}
+			}
+		</script>
+	</body>
+</html>
