@@ -5,10 +5,9 @@
 ; Date: 06/27/2022
 ; Modified By: Ace Baugh
 ; Description: This simple exercise takes the user's input
-;                       and checks to see if it equal to the random
-;                       number generated and displays if it is higher 
-;                       lower or right on
-; Referenced Code: W3Schools: Trigger button enter
+;                       from the dropdown list and displays an new
+;                       content card with a table of the desired data.
+;                       Using an Array of Objects to store books and authors
 ============================================
 -->
 
@@ -26,8 +25,10 @@
 	</head>
 	<body>
 		<div id="container">
+			<!-- Page Header -->
 			<h1 class="app-header">Welcome to In-N-Out-Books</h1>
 
+			<!--Input Card -->
 			<div class="card-container">
 				<div class="card">
 					<div class="card-title">My Favorites</div>
@@ -56,6 +57,7 @@
 				</div>
 			</div>
 
+			<!-- Books Table Card set to display none -->
 			<div class="card-container" id="booksResults" style="display: none">
 				<div class="card">
 					<div class="card-title">Top 3 Favorite Books</div>
@@ -86,6 +88,7 @@
 				</div>
 			</div>
 
+			<!-- Authors Table Card set to display none -->
 			<div class="card-container" id="authorsResults" style="display: none">
 				<div class="card">
 					<div class="card-title">Top 3 Favorite Authors</div>
@@ -118,7 +121,7 @@
 			// Variable that holds the button
 			const btnDisplayListing = document.getElementById('btnDisplayListing');
 
-			// Book Objects
+			// Book Objects in Array
 			let books = [
 				{
 					'isbn': '1250773024',
@@ -137,6 +140,7 @@
 				}
 			];
 
+			// Author Objects in Array
 			let authors = [
 				{
 					'name': 'Orson Scott Card',
@@ -152,6 +156,7 @@
 				}
 			];
 
+			// Binding Books values to DOM Table
 			document.getElementById("txtEndersGameISBN").innerHTML = books[0].isbn;
 			document.getElementById("txtEndersGameTitle").innerHTML = books[0].title;
 			document.getElementById("txtEndersGamePages").innerHTML = books[0].pages;
@@ -162,6 +167,7 @@
 			document.getElementById("txtWinFriendsTitle").innerHTML = books[2].title;
 			document.getElementById("txtWinFriendsPages").innerHTML = books[2].pages;
 
+			// Binding Author values to DOM Table
 			document.getElementById("txtCardName").innerHTML = authors[0].name;
 			document.getElementById("txtCardGenre").innerHTML = authors[0].genre;
 			document.getElementById("txtSmithName").innerHTML = authors[1].name;
@@ -182,9 +188,11 @@
 				let authorsCard = document.getElementById('authorsResults');
 
 				if (choice === 'books') {
+					// Show Books not Authors
 					authorsCard.style.display = 'none';
 					booksCard.style.display = 'block';
 				} else if (choice === 'authors') {
+					//Show Authors not Books
 					booksCard.style.display = 'none';
 					authorsCard.style.display = 'block';
 				} else {
