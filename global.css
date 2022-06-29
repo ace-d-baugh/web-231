@@ -18,10 +18,12 @@
 	--secondaryColor: #453674;
 }
 
+/* Style for main container of content in body  */ 
 #container {
 	padding: 10px;
 }
 
+/* Making the font the same over the whole body  */ 
 body {
 	font-family: Oswald, Verdana, arial, sans-serif;
 }
@@ -30,6 +32,7 @@ h1 {
 	text-align: center;
 }
 
+/* Card styles */ 
 .card-container {
 	width: 600px;
 	margin: 3% auto 0;
@@ -64,6 +67,17 @@ h1 {
    padding: 20px;
 }
 
+/* Style for input fields and dropdown menu selects */ 
+.input, .drop-down-menu {
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+
+/* Button styles */ 
 .btn {
    border: none;
    text-align: center;
@@ -74,15 +88,6 @@ h1 {
    cursor: pointer;
    padding: 15px 32px;
    color: black;
-}
-
-.input, .drop-down-menu {
-   padding: 12px 20px;
-   margin: 8px 0;
-   display: inline-block;
-   border: 1px solid #ccc;
-   border-radius: 4px;
-   box-sizing: border-box;
 }
 
 .btn-primary {

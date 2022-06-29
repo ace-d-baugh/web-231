@@ -8,25 +8,31 @@
 ;============================================
 */
 
+/* Table styling over all  */
 table {
-   width: 100%;
-   border-collapse: collapse;
-   margin-bottom: 30px;
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 30px;
 }
 
+/* Table styling over all  */
 th {
-   text-align: left;
-   background-color: var(--secondaryColor);
-   color: white;
+	text-align: left;
+	background-color: var(--secondaryColor);
+	color: white;
 }
 
-th, td {
-   border: 1px solid #ddd;
-   padding: 12px;
+/* Styles for table header and regular cells  */
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 12px; /* Directions called for padding only on top and bottom, 
+                                 but all around matched pictures*/ 
 }
 
+/* Style on rows when mouse overl  */
 tr:hover {
-   background-color: var(--accentColor);
-   color: var(--secondaryColor);
-   cursor: pointer;
+	background-color: var(--accentColor);
+	color: var(--secondaryColor);
+	cursor: pointer;
 }
