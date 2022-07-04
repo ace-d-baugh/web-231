@@ -1,0 +1,246 @@
+<!--
+============================================
+; Title: Assignment 7.2 - Javazon - baugh-javazon.html
+; Author: Professor Krasso & Ace Baugh
+; Date: 07/03/2022
+; Modified By: Ace Baugh
+; Description: This simple exercise takes the user's input
+;                       from the dropdown list and displays an new
+;                       content card with a table of the desired data.
+;                       Using an Array of Objects to store books and authors
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WEB 231 – Enterprise JavaScript I</title>
+
+		<!-- Link to external CSS page-->
+		<link rel="stylesheet" href="../global.css" />
+		<link rel="stylesheet" href="baugh-javazon.css" />
+	</head>
+	<body>
+		<div id="container">
+			<!-- Page Header -->
+			<h1 class="app-header">Welcome to the Javazon App!</h1>
+
+			<!--Input Card -->
+			<div class="card-container">
+				<div class="card">
+					<div class="card-title">Javazon Selection Form</div>
+					<div class="card-content">
+						<form class="form">
+							<div class="form-field">
+								<label for="listing">Choose a listing</label>
+								<select type="text" name="listing" id="listing" class="drop-down-menu" required>
+									<option value="select">--Select--</option>
+									<option value="products">Products</option>
+									<option value="services">Services</option>
+									<option value="employees">Employees</option>
+								</select>
+							</div>
+							<div class="form-field">
+								<button id="btnDisplayListing" class="btn btn-primary full-width" type="button">Display Listing</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- Return to home page -->
+				<div class="home-link">
+					<p>
+						<a href="../index.html" class="return-home">Return</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- Javazon Products Table Card set to display none -->
+			<div class="card-container" id="products">
+				<div class="card">
+					<div class="card-title">Javazon Products</div>
+					<div class="card-content">
+						<table>
+							<tr>
+								<th>Product ID</th>
+								<th>Description</th>
+								<th>Price</th>
+								<th>Quantity</th>
+								<th>Total Value</th>
+							</tr>
+							<tr id="product01">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+							<tr id="product02">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+							<tr id="product03">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+							<tr id="product04">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+							<tr id="product05">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- Javazon Services Table Card set to display none -->
+			<div class="card-container" id="services">
+				<div class="card">
+					<div class="card-title">Javazon Services</div>
+					<div class="card-content">
+						<table>
+							<tr>
+								<th>Service ID</th>
+								<th>Description</th>
+								<th>Hourly Rate</th>
+								<th>Minimum Billable hours</th>
+							</tr>
+							<tr id="service01">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+							<tr id="service02">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+							<tr id="service03">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+         </div>
+
+			<!-- Javazon Employees Table Card set to display none -->
+			<div class="card-container" id="employees">
+				<div class="card">
+					<div class="card-title">Javazon Employees</div>
+					<div class="card-content">
+						<table>
+							<tr>
+								<th>Employee ID</th>
+								<th>Last Name</th>
+								<th>First Name</th>
+								<th>Salary</th>
+							</tr>
+							<tr id="">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+                     </tr>
+							<tr id="">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+							<tr id="">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+							<tr id="">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+							<tr id="">
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+								<td id=""></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+         </div>
+		</div>
+
+		<!-- JAVASCRIPT SECTION-->
+		<script>
+			// Variable that holds the button
+			const btnDisplayListing = document.getElementById('btnDisplayListing');
+
+         // Variables that holds the table cards
+         let products = document.getElementById('products');
+         let services = document.getElementById('services');
+         let employees = document.getElementById('employees');
+
+         // Setting each table card to be hidden by default
+         products.style.display = 'none';
+         services.style.display = 'none';
+         employees.style.display = 'none';
+
+
+
+			// Adding Event Listener to the button
+			btnDisplayListing.addEventListener('click', listingDisplay);
+
+			// Once button is pressed a function will be called that the selection made
+			// Or an alert will show to prompt for a selection to be made
+			function listingDisplay() {
+				// Variable to hold user selection
+				const choice = document.getElementById('listing').value;
+
+				switch(choice) {
+               case 'products':
+                  products.style.display = 'block';
+                  services.style.display = 'none';
+                  employees.style.display = 'none';
+                  break;
+               case 'services':
+                  products.style.display = 'none';
+                  services.style.display = 'block';
+                  employees.style.display = 'none';
+                  break;
+               case 'employees':
+                  products.style.display = 'none';
+                  services.style.display = 'none';
+                  employees.style.display = 'block';
+                  break;
+               default: 
+                  alert('Please select a category');
+                  break;
+            }
+			}
+		</script>
+	</body>
+</html>
