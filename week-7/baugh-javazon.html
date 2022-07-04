@@ -2,12 +2,12 @@
 ============================================
 ; Title: Assignment 7.2 - Javazon - baugh-javazon.html
 ; Author: Professor Krasso & Ace Baugh
-; Date: 07/03/2022
+; Date: 07/04/2022
 ; Modified By: Ace Baugh
-; Description: This simple exercise takes the user's input
-;                       from the dropdown list and displays an new
-;                       content card with a table of the desired data.
-;                       Using an Array of Objects to store books and authors
+; Description: This application uses a dropdown menu to decide which 
+;                       table to display. Products, services, and employees are
+;                       created first as object by class constructors by passing
+;                       the values to the constructor through the new command
 ============================================
 -->
 
@@ -71,40 +71,40 @@
 								<th>Quantity</th>
 								<th>Total Value</th>
 							</tr>
-							<tr id="product01">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="mousePad">
+								<td id="mousePadId"></td> <!-- Product ID -->
+								<td id="mousePadDescription"></td> <!-- Description -->
+								<td id="mousePadPrice"></td> <!-- Price -->
+								<td id="mousePadQuantity"></td> <!-- Quantity -->
+								<td id="mousePadTotalValue"></td> <!-- Total Value -->
 							</tr>
-							<tr id="product02">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="keyboard">
+								<td id="keyboardId"></td> <!-- Product ID -->
+								<td id="keyboardDescription"></td> <!-- Description -->
+								<td id="keyboardPrice"></td> <!-- Price -->
+								<td id="keyboardQuantity"></td> <!-- Quantity -->
+								<td id="keyboardTotalValue"></td> <!-- Total Value -->
 							</tr>
-							<tr id="product03">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="headphones">
+								<td id="headphonesId"></td> <!-- Product ID -->
+								<td id="headphonesDescription"></td> <!-- Description -->
+								<td id="headphonesPrice"></td> <!-- Price -->
+								<td id="headphonesQuantity"></td> <!-- Quantity -->
+								<td id="headphonesTotalValue"></td> <!-- Total Value -->
 							</tr>
-							<tr id="product04">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="mouse">
+								<td id="mouseId"></td> <!-- Product ID -->
+								<td id="mouseDescription"></td> <!-- Description -->
+								<td id="mousePrice"></td> <!-- Price -->
+								<td id="mouseQuantity"></td> <!-- Quantity -->
+								<td id="mouseTotalValue"></td> <!-- Total Value -->
 							</tr>
-							<tr id="product05">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="speakers">
+								<td id="speakersId"></td> <!-- Product ID -->
+								<td id="speakersDescription"></td> <!-- Description -->
+								<td id="speakersPrice"></td> <!-- Price -->
+								<td id="speakersQuantity"></td> <!-- Quantity -->
+								<td id="speakersTotalValue"></td> <!-- Total Value -->
 							</tr>
 						</table>
 					</div>
@@ -123,23 +123,23 @@
 								<th>Hourly Rate</th>
 								<th>Minimum Billable hours</th>
 							</tr>
-							<tr id="service01">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="classic">
+								<td id="classicId"></td> <!-- Service ID -->
+								<td id="classicDescription"></td> <!-- Description -->
+								<td id="classicHourlyRate"></td> <!-- Hourly Rate -->
+								<td id="classicMin"></td> <!-- Minimum Billable hours -->
 							</tr>
-							<tr id="service02">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="premium">
+								<td id="premiumId"></td> <!-- Service ID -->
+								<td id="premiumDescription"></td> <!-- Description -->
+								<td id="premiumHourlyRate"></td> <!-- Hourly Rate -->
+								<td id="premiumMin"></td> <!-- Minimum Billable hours -->
 							</tr>
-							<tr id="service03">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="celebrate">
+								<td id="celebrateId"></td> <!-- Service ID -->
+								<td id="celebrateDescription"></td> <!-- Description -->
+								<td id="celebrateHourlyRate"></td> <!-- Hourly Rate -->
+								<td id="celebrateMin"></td> <!-- Minimum Billable hours -->
 							</tr>
 						</table>
 					</div>
@@ -158,35 +158,35 @@
 								<th>First Name</th>
 								<th>Salary</th>
 							</tr>
-							<tr id="">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="browning">
+								<td id="browningId"></td> <!-- Employee ID -->
+								<td id="browningLastName"></td> <!-- EmployeeLast Name -->
+								<td id="browningFirstName"></td> <!-- First Name -->
+								<td id="browningSalary"></td> <!-- Salary -->
                      </tr>
-							<tr id="">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="frost">
+								<td id="frostId"></td> <!-- Employee ID -->
+								<td id="frostLastName"></td> <!-- EmployeeLast Name -->
+								<td id="frostFirstName"></td> <!-- First Name -->
+								<td id="frostSalary"></td> <!-- Salary -->
 							</tr>
-							<tr id="">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="boyer">
+								<td id="boyerId"></td> <!-- Employee ID -->
+								<td id="boyerLastName"></td> <!-- EmployeeLast Name -->
+								<td id="boyerFirstName"></td> <!-- First Name -->
+								<td id="boyerSalary"></td> <!-- Salary -->
 							</tr>
-							<tr id="">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-							</tr>
-							<tr id="">
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
-								<td id=""></td>
+							<tr id="conner">
+								<td id="connerId"></td> <!-- Employee ID -->
+								<td id="connerLastName"></td> <!-- EmployeeLast Name -->
+								<td id="connerFirstName"></td> <!-- First Name -->
+								<td id="connerSalary"></td> <!-- Salary -->
+                     </tr>
+							<tr id="ritter">
+								<td id="ritterId"></td> <!-- Employee ID -->
+								<td id="ritterLastName"></td> <!-- EmployeeLast Name -->
+								<td id="ritterFirstName"></td> <!-- First Name -->
+								<td id="ritterSalary"></td> <!-- Salary -->
 							</tr>
 						</table>
 					</div>
@@ -199,6 +199,56 @@
 			// Variable that holds the button
 			const btnDisplayListing = document.getElementById('btnDisplayListing');
 
+         //Product Class
+         class Product {
+            constructor(id, description, price, quantity) {
+               this.id = id;
+               this.description = description;
+               this.price = price;
+               this.quantity = quantity;
+               this.totalValue = price * quantity;
+            }
+         }
+
+         //Services Class
+         class Services {
+            constructor(id, description, hourlyRate, min) {
+               this.id = id;
+               this.description = description;
+               this.hourlyRate = hourlyRate.toFixed(2);
+               this.min = min;
+            }
+         }
+
+         //Employee Class
+         class Employee {
+            constructor(id, lastName, firstName, salary) {
+               this.id = id;
+               this.lastName = lastName;
+               this.firstName = firstName;
+               this.salary = salary.toFixed(2);
+            }
+         }
+
+         //Product Declaration
+         let mousePad = new Product('P015', 'Gaming Mouse Pad', 34.99, 2);
+         let keyboard = new Product('K618', 'Horus Ultra-Slim Wireless Mechanical Keyboard', 84.99, 5);
+         let headphones = new Product('H510', 'Zeus Gaming Headphones', 67.99, 3);
+         let mouse = new Product('M913', 'Impact Elite Gaming Mouse', 57.99, 10);
+         let speakers = new Product('GS560', 'Adiemus Speaker Bar', 46.99, 8);
+
+         //Services Declaration
+         let classic = new Services(101, 'Classics VIP Tour', 200, 4);
+         let premium = new Services(102, 'Premium VIP Tour', 850, 7);
+         let celebrate = new Services(103, 'Celebrate the 50th VIP Tour', 5000, 6);
+
+         //Employee Declaration
+         let browning = new Employee(20975451, 'Browning', 'Sue', 45380.50);
+         let frost = new Employee(28573758, 'Frost', 'Bella', 53666.00);
+         let boyer = new Employee(57068881, 'Boyer', 'Elliot', 47882.75);
+         let conner = new Employee(35626505, 'Conner', 'Tamara', 50612.60);
+         let ritter = new Employee(89346183, 'Ritter', 'Alisha', 48077.20);
+
          // Variables that holds the table cards
          let products = document.getElementById('products');
          let services = document.getElementById('services');
@@ -209,9 +259,98 @@
          services.style.display = 'none';
          employees.style.display = 'none';
 
+         //Binding object values to the table cells
 
+         // Products Table
 
-			// Adding Event Listener to the button
+         // Mouse Pad
+         document.getElementById('mousePadId').innerHTML = mousePad.id;
+         document.getElementById('mousePadDescription').innerHTML = mousePad.description;
+         document.getElementById('mousePadPrice').innerHTML = mousePad.price.toFixed(2);
+         document.getElementById('mousePadQuantity').innerHTML = mousePad.quantity;
+         document.getElementById('mousePadTotalValue').innerHTML = mousePad.totalValue.toFixed(2);
+
+         // Keyboard
+         document.getElementById('keyboardId').innerHTML = keyboard.id;
+         document.getElementById('keyboardDescription').innerHTML = keyboard.description;
+         document.getElementById('keyboardPrice').innerHTML = keyboard.price.toFixed(2);
+         document.getElementById('keyboardQuantity').innerHTML = keyboard.quantity;
+         document.getElementById('keyboardTotalValue').innerHTML = keyboard.totalValue.toFixed(2);
+
+         // Headphones
+         document.getElementById('headphonesId').innerHTML = headphones.id;
+         document.getElementById('headphonesDescription').innerHTML = headphones.description;
+         document.getElementById('headphonesPrice').innerHTML = headphones.price.toFixed(2);
+         document.getElementById('headphonesQuantity').innerHTML = headphones.quantity;
+         document.getElementById('headphonesTotalValue').innerHTML = headphones.totalValue.toFixed(2);
+
+         // Mouse
+         document.getElementById('mouseId').innerHTML = mouse.id;
+         document.getElementById('mouseDescription').innerHTML = mouse.description;
+         document.getElementById('mousePrice').innerHTML = mouse.price.toFixed(2);
+         document.getElementById('mouseQuantity').innerHTML = mouse.quantity;
+         document.getElementById('mouseTotalValue').innerHTML = mouse.totalValue.toFixed(2);
+
+         // Speakers
+         document.getElementById('speakersId').innerHTML = speakers.id;
+         document.getElementById('speakersDescription').innerHTML = speakers.description;
+         document.getElementById('speakersPrice').innerHTML = speakers.price.toFixed(2);
+         document.getElementById('speakersQuantity').innerHTML = speakers.quantity;
+         document.getElementById('speakersTotalValue').innerHTML = speakers.totalValue.toFixed(2);
+
+         // Services Table
+
+         // Classic
+         document.getElementById('classicId').innerHTML = classic.id;
+         document.getElementById('classicDescription').innerHTML = classic.description;
+         document.getElementById('classicHourlyRate').innerHTML = classic.hourlyRate;
+         document.getElementById('classicMin').innerHTML = classic.min;
+
+         // Premium
+         document.getElementById('premiumId').innerHTML = premium.id;
+         document.getElementById('premiumDescription').innerHTML = premium.description;
+         document.getElementById('premiumHourlyRate').innerHTML = premium.hourlyRate;
+         document.getElementById('premiumMin').innerHTML = premium.min;
+
+         // Celebrate
+         document.getElementById('celebrateId').innerHTML = celebrate.id;
+         document.getElementById('celebrateDescription').innerHTML = celebrate.description;
+         document.getElementById('celebrateHourlyRate').innerHTML = celebrate.hourlyRate;
+         document.getElementById('celebrateMin').innerHTML = celebrate.min;
+
+         // Employees Table
+
+         // Browning
+         document.getElementById('browningId').innerHTML = browning.id;
+         document.getElementById('browningLastName').innerHTML = browning.lastName;
+         document.getElementById('browningFirstName').innerHTML = browning.firstName;
+         document.getElementById('browningSalary').innerHTML = browning.salary;
+
+         // Frost
+         document.getElementById('frostId').innerHTML = frost.id;
+         document.getElementById('frostLastName').innerHTML = frost.lastName;
+         document.getElementById('frostFirstName').innerHTML = frost.firstName;
+         document.getElementById('frostSalary').innerHTML = frost.salary;
+
+         // Boyer
+         document.getElementById('boyerId').innerHTML = boyer.id;
+         document.getElementById('boyerLastName').innerHTML = boyer.lastName;
+         document.getElementById('boyerFirstName').innerHTML = boyer.firstName;
+         document.getElementById('boyerSalary').innerHTML = boyer.salary;
+
+         // Conner
+         document.getElementById('connerId').innerHTML = conner.id;
+         document.getElementById('connerLastName').innerHTML = conner.lastName;
+         document.getElementById('connerFirstName').innerHTML = conner.firstName;
+         document.getElementById('connerSalary').innerHTML = conner.salary;
+         
+         // Ritter
+         document.getElementById('ritterId').innerHTML = ritter.id;
+         document.getElementById('ritterLastName').innerHTML = ritter.lastName;
+         document.getElementById('ritterFirstName').innerHTML = ritter.firstName;
+         document.getElementById('ritterSalary').innerHTML = ritter.salary;
+
+         // Adding Event Listener to the button
 			btnDisplayListing.addEventListener('click', listingDisplay);
 
 			// Once button is pressed a function will be called that the selection made
