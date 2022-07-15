@@ -1,0 +1,19 @@
+/*
+============================================
+; Title: Assignment 8.2 - Alphabet Game - baugh-alphabet-game.css
+; Author: Professor Krasso & Ace Baugh
+; Date: 07/15/2022
+; Modified By: Ace Baugh
+; Description: This CSS file gives extra style to baugh-alphabet-game.html
+;============================================
+*/
+
+#alphabetOutput, #resultsOutput {
+   font-size: 28px;
+   text-align: center;
+}
+
+.btn {
+   border: 2px solid black;
+   border-radius: 5px;
+}.
