@@ -1,0 +1,132 @@
+<!--
+============================================
+; Title: Assignment 9.2 - Card Game - baugh-card-game.html
+; Author: Professor Krasso & Ace Baugh
+; Date: 07/18/2022
+; Modified By: Ace Baugh
+; Description: This application will display a shuffled deck of cards.
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WEB 231 – Enterprise JavaScript I</title>
+
+		<!-- Link to external CSS page-->
+		<link rel="stylesheet" href="../global.css" />
+		<link rel="stylesheet" href="baugh-card-game.css" />
+	</head>
+	<body>
+		<div id="container">
+			<!-- Page Header -->
+			<h1 class="app-header">Welcome to the Card Game!</h1>
+
+			<!--Input Card -->
+			<div class="card-container">
+				<div class="card">
+					<div class="card-title">Card Dealer</div>
+					<div class="card-content">
+						<button id="btnDeal" class="btn btn-primary full-width" type="button">Deal Cards</button>
+					</div>
+				</div>
+
+				<!-- Return to home page -->
+				<div class="home-link">
+					<p>
+						<a href="../index.html" class="return-home">Return</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- Card displaying the shuffled deck of cards-->
+			<div class="card-container">
+				<div class="card">
+					<div class="card-title">Shuffled Cards</div>
+					<div class="card-content" id="shuffledDeck" style="display: none;"></div>
+				</div>
+			</div>
+
+		<!-- JAVASCRIPT SECTION-->
+		<script>
+
+         const btnDeal = document.getElementById('btnDeal');
+         let deckContent = document.getElementById('shuffledDeck');
+
+         // Create Deck of Cards
+         let deck = [];
+         const suits = ["Hearts", "Spades", "Clubs", "Diamonds"];
+         const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+         // Create a function to create a card object
+         function createCard(suit, value) {
+            let card = {
+               suit: suit,
+               value: value
+            };
+            return card;
+         }
+
+           // Create a function to create a deck of cards
+         function createDeck() {
+            for (let suit in suits) {
+               for (let value in values) {
+                     deck.push(createCard(suits[suit], values[value]));
+               }
+            }
+            return deck;
+         }
+
+         // Create a function to shuffle the deck of cards
+         function shuffle(deck) {
+            let currentIndex = deck.length, temporaryValue, randomIndex;
+             // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+               // Pick a remaining element...
+               randomIndex = Math.floor(Math.random() * currentIndex);
+               currentIndex -= 1;
+                 // And swap it with the current element.
+               temporaryValue = deck[currentIndex];
+               deck[currentIndex] = deck[randomIndex];
+               deck[randomIndex] = temporaryValue;
+            }
+            return deck;
+         }
+
+         function displaySuit (suit) {
+            if (suit === "Hearts") {
+               return "<div class='cardSuit red'>&#9829;</div>";
+            } else if (suit === "Spades") {
+               return "<div class='cardSuit'>&#9824;</div>";
+            } else if (suit === "Clubs") {
+               return "<div class='cardSuit'>&#9827;</div>";
+            } else {
+               return "<div class='cardSuit red'>&#9830;</div>";
+            }
+         }
+
+         function displayCards(deck) {
+            let cardHTML = "Hello";
+         //    let cardHTML = "<div class='shuffledCards'>";
+         //    for (let i = 0; i < deck.length; i++) {
+         //       cardHTML += "<div class='deckCard'><div class='cardValue'>" + deck[i].value + "</div>" + displaySuit(deck[i].suit) + "</div></div>";
+         //    }
+         //    cardHTML += "</div>";
+            document.getElementById('shuffledDeck').innerHTML = cardHTML;
+            deckContent.style.display = "flex";
+         }
+
+         function dealCards() {
+            createDeck();
+            deck = shuffle(deck);
+            displayCards(deck);
+         }
+
+         btnDeal.addEventListener('click', dealCards());
+
+		</script>
+	</body>
+</html>

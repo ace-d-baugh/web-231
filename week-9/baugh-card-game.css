@@ -1,0 +1,59 @@
+/*
+============================================
+; Title: Assignment 9.2 - Card Game - baugh-card-game.css
+; Author: Professor Krasso & Ace Baugh
+; Date: 07/18/2022
+; Modified By: Ace Baugh
+; Description: This CSS file gives extra style to baugh-card-game.html
+;============================================
+*/
+
+#shuffledDeck {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.shuffledCards {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.deckCard {
+   width: 8rem;
+   aspect-ratio: 2/3;
+   margin: .25em;
+   background-color: #fff;
+   border-radius: 0.5rem;
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: #000;
+   position: relative;
+}
+
+.cardValue {
+   position: absolute;
+   top: 5px;
+   left: 5px;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+.cardSuit {
+   font-size: 1.5em;
+   font-weight: bold;
+}
+
+.red {
+   color: red;
+}
